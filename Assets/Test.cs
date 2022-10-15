@@ -8,8 +8,8 @@ public class Boss
     //magic関数
     public void magic(int MPpoint)
     {
-        for (int mp = 53; mp >=0;mp=mp-5 )
-        {
+        
+
             if(mp>=5)
             {
                this.mp-=MPpoint;
@@ -21,7 +21,7 @@ public class Boss
                 if(mp<5)
                 Debug.Log("MPが足りないため、魔法が使えない");
             }
-        }
+        
     }
     
 
@@ -35,7 +35,11 @@ public class Test : MonoBehaviour
     void Start()
     {
        Boss lastboss=new Boss();
-       lastboss.magic(5);
+      for (int i = 0; i < 10; i++)
+      {
+        lastboss.magic(5);
+      }
+        lastboss.magic(5);
       
     
     
